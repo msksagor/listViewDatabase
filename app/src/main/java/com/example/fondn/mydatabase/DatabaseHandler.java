@@ -108,6 +108,44 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return contactList;
     }
 
+
+
+
+
+
+
+
+
+////////////--------------------
+    ///same as  // Getting All Contacts
+    public ArrayList<Contact> getData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<Contact> car= new ArrayList<Contact>();
+        Cursor result = db.rawQuery("select * from "+TABLE_CONTACTS , null);
+        while(result.moveToNext()){
+            car.add( new Contact(result.getString(result.getColumnIndex(KEY_NAME))));
+
+        }
+        return car;
+    }
+    ////////////-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Updating single contact
     public int updateContact(Contact contact) {
         SQLiteDatabase db = this.getWritableDatabase();

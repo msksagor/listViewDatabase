@@ -25,7 +25,7 @@ public class DataTest extends Activity {
         setContentView(R.layout.activity_data_test);
         textview = (TextView) findViewById(R.id.text);
         name = (EditText) findViewById(R.id.editTextID);
-        number = (EditText) findViewById(R.id.editText2ID);
+
         button = (Button) findViewById(R.id.button);
 
        final DatabaseHandler db = new DatabaseHandler(this);
@@ -35,10 +35,10 @@ public class DataTest extends Activity {
             @Override
             public void onClick(View v) {
                 String names = name.getText().toString();
-                String numbers = number.getText().toString();
 
 
-                db.addContact(new Contact(names,numbers));
+
+                db.addContact(new Contact(names));
 
                 Intent i = new Intent(DataTest.this,Sagor.class);
                 startActivity(i);

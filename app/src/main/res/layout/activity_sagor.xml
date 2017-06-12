@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.fondn.mydatabase.Sagor">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView"
-        android:textSize="30sp" />
+
+
+    <ListView
+        android:id="@+id/listVIewID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+
+
 </LinearLayout>
